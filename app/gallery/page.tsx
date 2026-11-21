@@ -3,10 +3,6 @@ import Image from "next/image";
 
 export default function Page() {
   const photos = [
-    "/2/2017prof2.avif", "/2/2017prof3.avif", "/2/2017prof4.avif",
-    "/2/2018prof1.avif", "/2/2018prof2.avif", "/2/2018prof3.avif",
-    "/2/2020prof2.avif", "/2/2020prof3.avif", "/2/2020prof4.avif",
-    "/2/2021prof1.avif", "/2/2021prof3.avif", "/2/2021prof4.avif",
     "/AB1.avif", "/AB2.avif", "/Cafeteria.avif", "/banner1.avif",
   ];
   return (
