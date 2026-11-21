@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
       {/* ── Top logo bar ── */}
       <div
-        className="w-full min-h-18.75 sm:min-h-25 flex items-center bg-no-repeat bg-cover bg-center sticky top-0 z-50"
+        className="w-full min-h-18.75 sm:min-h-25 flex items-center bg-no-repeat bg-cover bg-center relative z-50"
         style={{ backgroundImage: 'url("/2/iccidenav.avif")' }}
       >
         <div className="w-full flex justify-between items-center h-full px-2.5">
@@ -106,20 +106,20 @@ export default function Navbar() {
       </div>
 
       {/* ── Desktop nav bar ── */}
-      <div className="w-full min-h-0 sm:h-15 hidden md:flex justify-center items-center bg-white z-40 shadow-sm sticky top-18.75 sm:top-25">
+      <div className="w-full min-h-0 sm:h-15 hidden md:flex justify-center items-center bg-white z-40 shadow-sm relative">
         <div className="px-5 flex flex-row flex-wrap gap-3.75">
           <ul className="flex items-center md:text-[12px] lg:text-[15px] xl:text-[17px] gap-3.75 lg:gap-5 xl:gap-7.5 font-bold text-gray-800">
             <li>
               <Link
                 href="/"
-                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
               >
                 Home
               </Link>
             </li>
 
             <li className="relative group">
-              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
+              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
                 About
                 <svg
                   className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#650010] transition-transform duration-200 ease-out group-hover:rotate-180"
@@ -161,7 +161,7 @@ export default function Navbar() {
             </li>
 
             <li className="relative group">
-              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
+              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
                 Committees
                 <svg
                   className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#650010] transition-transform duration-200 ease-out group-hover:rotate-180"
@@ -197,7 +197,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/call-for-papers"
-                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
               >
                 Call For Papers
               </Link>
@@ -205,14 +205,14 @@ export default function Navbar() {
             <li>
               <Link
                 href="/important-dates"
-                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
               >
                 Important Dates
               </Link>
             </li>
 
             <li className="relative group">
-              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
+              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
                 Speakers
                 <svg
                   className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#650010] transition-transform duration-200 ease-out group-hover:rotate-180"
@@ -248,7 +248,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/paper-submission"
-                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
               >
                 Paper Submission
               </Link>
@@ -256,7 +256,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/registration"
-                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
               >
                 Registration
               </Link>
@@ -264,7 +264,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/contact-us"
-                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
               >
                 Contact Us
               </Link>
