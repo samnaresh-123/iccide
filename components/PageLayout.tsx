@@ -26,11 +26,15 @@ export function SectionCard({
   className?: string;
 }) {
   return (
-    <div
-      className={`w-full bg-[#E6CFCF] rounded-2xl rounded-tl-none relative z-1 flex justify-center items-start ${className}`}
-    >
-      <div className="absolute w-full h-full top-3 left-3 bg-black -z-10 rounded-2xl opacity-20 shadow-lg" />
-      <div className="p-3.75 w-full">{children}</div>
+    <div className="relative w-full">
+      {/* Offset shadow positioned behind the card */}
+      <div className="absolute w-full h-full top-3 left-3 bg-black opacity-20 rounded-2xl shadow-lg" />
+      {/* Main card with background positioned above the shadow */}
+      <div
+        className={`relative z-10 w-full bg-[#E6CFCF] rounded-2xl rounded-tl-none p-3.75 flex justify-center items-start ${className}`}
+      >
+        <div className="w-full">{children}</div>
+      </div>
     </div>
   );
 }
@@ -85,10 +89,10 @@ export function PageLayout({
   return (
     <div>
       <PageHero title={heroTitle} />
-      <div className="w-full max-h-[1800px]">
+      <div className="w-full">
         <div className="px-5 sm:px-8.75 lg:px-12.5 py-5">
-          <div className="w-full flex flex-col md:flex-row min-h-112.5 gap-5 sm:gap-8.75 lg:gap-17.5">
-            <div className="sm:basis-[65%]">
+          <div className="w-full flex flex-col md:flex-row min-h-112.5 gap-5 sm:gap-8.75 lg:gap-17.5 items-start">
+            <div className="sm:basis-[65%] w-full min-w-0">
               <div className="w-full">
                 <SectionHeading>{headingTitle}</SectionHeading>
                 <SectionCard className="min-h-102.5">{children}</SectionCard>
