@@ -1,27 +1,9 @@
 import Link from "next/link";
+import HeroSlider from "@/components/HeroSlider";
 
 /* Hero banner shared by every inner page */
 export function PageHero({ title }: { title: string }) {
-  return (
-    <div className="w-full h-62.5 sm:h-87.5 lg:h-112.5">
-      <div
-        className="w-full h-full flex justify-center items-center text-center bg-no-repeat bg-cover bg-center px-5 relative"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/pic1.avif)",
-        }}
-      >
-        <div className="absolute w-full h-full top-0 left-0">
-          <video autoPlay muted loop playsInline className="h-full w-full object-cover">
-            <source src="/intro.mp4" />
-          </video>
-        </div>
-        <h1 className="text-[16px] sm:text-[22px] lg:text-[28px] mx-7.5 font-serif font-semibold text-white max-w-175 z-10">
-          {title}
-        </h1>
-      </div>
-    </div>
-  );
+  return <HeroSlider title={title} />;
 }
 
 /* Pill-style section heading */
