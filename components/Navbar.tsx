@@ -108,114 +108,164 @@ export default function Navbar() {
       {/* ── Desktop nav bar ── */}
       <div className="w-full min-h-0 sm:h-15 hidden md:flex justify-center items-center bg-white z-40 shadow-sm sticky top-18.75 sm:top-25">
         <div className="px-5 flex flex-row flex-wrap gap-3.75">
-          <ul className="flex md:text-[12px] lg:text-[16px] xl:text-[18px] gap-3.75 lg:gap-5 xl:gap-8.75 font-bold">
+          <ul className="flex items-center md:text-[12px] lg:text-[15px] xl:text-[17px] gap-3.75 lg:gap-5 xl:gap-7.5 font-bold text-gray-800">
             <li>
-              <Link href="/" className="hover:text-[#650010]">
+              <Link
+                href="/"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+              >
                 Home
               </Link>
             </li>
 
             <li className="relative group">
-              <span className="cursor-pointer hover:text-[#650010]">About</span>
-              <ul className="absolute -left-3 top-6.25 hidden group-hover:flex flex-col gap-1.25 bg-white p-3.75 z-40 shadow-md">
-                <li>
-                  <Link
-                    href="/conference"
-                    className="hover:text-[#650010] whitespace-nowrap"
-                  >
-                    Conference
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/university"
-                    className="hover:text-[#650010] whitespace-nowrap"
-                  >
-                    University
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/school"
-                    className="hover:text-[#650010] whitespace-nowrap"
-                  >
-                    School
-                  </Link>
-                </li>
-              </ul>
+              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
+                About
+                <svg
+                  className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#650010] transition-transform duration-200 ease-out group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+              <div className="absolute -left-2 top-full pt-1.5 opacity-0 -translate-y-1 invisible pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible group-hover:pointer-events-auto transition-all duration-200 ease-out z-50">
+                <ul className="min-w-44 bg-white rounded-xl shadow-lg border border-gray-100 py-1.5 px-1.5 flex flex-col gap-0.5">
+                  <li>
+                    <Link
+                      href="/conference"
+                      className="block px-3 py-2 rounded-lg text-gray-700 hover:text-[#650010] hover:bg-[#650010]/8 font-medium text-[13px] lg:text-[14px] transition-colors duration-150 whitespace-nowrap"
+                    >
+                      Conference
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/university"
+                      className="block px-3 py-2 rounded-lg text-gray-700 hover:text-[#650010] hover:bg-[#650010]/8 font-medium text-[13px] lg:text-[14px] transition-colors duration-150 whitespace-nowrap"
+                    >
+                      University
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/school"
+                      className="block px-3 py-2 rounded-lg text-gray-700 hover:text-[#650010] hover:bg-[#650010]/8 font-medium text-[13px] lg:text-[14px] transition-colors duration-150 whitespace-nowrap"
+                    >
+                      School
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li className="relative group">
-              <span className="cursor-pointer hover:text-[#650010]">
+              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
                 Committees
+                <svg
+                  className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#650010] transition-transform duration-200 ease-out group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
               </span>
-              <ul className="absolute -left-3 top-6.25 w-55 hidden group-hover:flex flex-col gap-1.25 z-40 bg-white p-3.75 shadow-md">
-                <li>
-                  <Link
-                    href="/organizing-committee"
-                    className="hover:text-[#650010]"
-                  >
-                    Organizing Committee
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/program-committee"
-                    className="hover:text-[#650010]"
-                  >
-                    Program Committee
-                  </Link>
-                </li>
-              </ul>
+              <div className="absolute -left-2 top-full pt-1.5 opacity-0 -translate-y-1 invisible pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible group-hover:pointer-events-auto transition-all duration-200 ease-out z-50">
+                <ul className="min-w-52 bg-white rounded-xl shadow-lg border border-gray-100 py-1.5 px-1.5 flex flex-col gap-0.5">
+                  <li>
+                    <Link
+                      href="/organizing-committee"
+                      className="block px-3 py-2 rounded-lg text-gray-700 hover:text-[#650010] hover:bg-[#650010]/8 font-medium text-[13px] lg:text-[14px] transition-colors duration-150 whitespace-nowrap"
+                    >
+                      Organizing Committee
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/program-committee"
+                      className="block px-3 py-2 rounded-lg text-gray-700 hover:text-[#650010] hover:bg-[#650010]/8 font-medium text-[13px] lg:text-[14px] transition-colors duration-150 whitespace-nowrap"
+                    >
+                      Program Committee
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li>
-              <Link href="/call-for-papers" className="hover:text-[#650010]">
+              <Link
+                href="/call-for-papers"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+              >
                 Call For Papers
               </Link>
             </li>
             <li>
-              <Link href="/important-dates" className="hover:text-[#650010]">
+              <Link
+                href="/important-dates"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+              >
                 Important Dates
               </Link>
             </li>
 
             <li className="relative group">
-              <span className="cursor-pointer hover:text-[#650010]">
+              <span className="relative inline-flex items-center gap-1 py-1.5 cursor-pointer transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full group-hover:after:w-full after:transition-all after:duration-200">
                 Speakers
+                <svg
+                  className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#650010] transition-transform duration-200 ease-out group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
               </span>
-              <ul className="absolute -left-3 top-6.25 w-45 hidden group-hover:flex flex-col gap-1.25 z-40 bg-white p-3.75 shadow-md">
-                <li>
-                  <Link
-                    href="/previous-speakers"
-                    className="hover:text-[#650010]"
-                  >
-                    Previous Speakers
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/present-speakers"
-                    className="hover:text-[#650010]"
-                  >
-                    Present Speakers
-                  </Link>
-                </li>
-              </ul>
+              <div className="absolute -left-2 top-full pt-1.5 opacity-0 -translate-y-1 invisible pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible group-hover:pointer-events-auto transition-all duration-200 ease-out z-50">
+                <ul className="min-w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-1.5 px-1.5 flex flex-col gap-0.5">
+                  <li>
+                    <Link
+                      href="/previous-speakers"
+                      className="block px-3 py-2 rounded-lg text-gray-700 hover:text-[#650010] hover:bg-[#650010]/8 font-medium text-[13px] lg:text-[14px] transition-colors duration-150 whitespace-nowrap"
+                    >
+                      Previous Speakers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/present-speakers"
+                      className="block px-3 py-2 rounded-lg text-gray-700 hover:text-[#650010] hover:bg-[#650010]/8 font-medium text-[13px] lg:text-[14px] transition-colors duration-150 whitespace-nowrap"
+                    >
+                      Present Speakers
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li>
-              <Link href="/paper-submission" className="hover:text-[#650010]">
+              <Link
+                href="/paper-submission"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+              >
                 Paper Submission
               </Link>
             </li>
             <li>
-              <Link href="/registration" className="hover:text-[#650010]">
+              <Link
+                href="/registration"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+              >
                 Registration
               </Link>
             </li>
             <li>
-              <Link href="/contact-us" className="hover:text-[#650010]">
+              <Link
+                href="/contact-us"
+                className="relative inline-flex items-center py-1.5 transition-colors duration-200 hover:text-[#650010] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#650010] after:rounded-full hover:after:w-full after:transition-all after:duration-200 cursor-pointer"
+              >
                 Contact Us
               </Link>
             </li>

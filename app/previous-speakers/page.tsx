@@ -29,7 +29,7 @@ const yearGroups: YearGroup[] = [
       {
         name: "Dr. Nandimandalam Mohan Krishna Varma",
         desc: "R&D Center, Principal Researcher at GS Co.,LTD.",
-        img: "/preivious-speakers/mohan.jfif",
+        img: "/preivious-speakers/mohan.jpg",
       },
       {
         name: "Prof. Dr. Marco Aiello",
