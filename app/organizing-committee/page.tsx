@@ -2,16 +2,16 @@ import { PageLayout } from "@/components/PageLayout";
 
 export default function Page() {
   const members = [
-    { role: "Chief Patron", name: "Dr. G. Viswanathan", designation: "Chancellor, VIT Group of Institutions" },
-    { role: "Patron", name: "Mr. Sankar Viswanathan", designation: "Vice President, VIT Group" },
-    { role: "Patron", name: "Mr. Sekar Viswanathan", designation: "Vice President, VIT Group" },
-    { role: "Patron", name: "Dr. G. V. Selvam", designation: "Vice President, VIT Group" },
-    { role: "Patron", name: "Dr. S. Narayanan", designation: "Vice Chancellor, VIT-AP University" },
-    { role: "Conference Chair", name: "Dr. Nagaraju Devarakonda", designation: "Professor & Dean, VIT-AP" },
-    { role: "Organizing Chair", name: "Dr. K. Venkatesh Sharma", designation: "Professor, VIT-AP" },
-    { role: "Organizing Secretary", name: "Dr. Hemasundhar Reddy", designation: "Associate Professor, VIT-AP" },
-    { role: "Publication Chair", name: "Dr. Rajkumar Buyya", designation: "Professor, University of Melbourne" },
-    { role: "Technical Chair", name: "Dr. Rajkumar", designation: "Senior Researcher" },
+    { role: "Chief Patron", name: "Dr. G. Viswanathan", designation: "Chancellor, VIT University" },
+    { role: "Patron", name: "Mr. Sankar Viswanathan", designation: "Vice President, VIT University" },
+    { role: "Patron", name: "Dr. Sekar Viswanathan", designation: "Vice President, VIT University" },
+    { role: "Patron", name: "Dr. G. V. Selvam", designation: "Vice President, VIT University" },
+    { role: "Patron", name: "Dr. P. Arulmozhivarman", designation: "Vice Chancellor, VIT-AP University" },
+    { role: "Patron", name: "Dr. Jagadish Chandra Mudiganti", designation: "Registrar, VIT-AP University" },
+    { role: "Conference Chair", name: "Dr. Nagaraju Devarakonda", designation: "VIT-AP University" },
+    { role: "Publication Chair", name: "Dr. Nabendu Chaki", designation: "University of Calcutta, India" },
+    { role: "Publication Chair", name: "Dr. Agostino Cortesi", designation: "Ca Foscari University, Venice, Italy" },
+    { role: "Publication Chair", name: "Dr. Valli Kumari Vatsavayi", designation: "Andhra University, India" },
   ];
   return (
     <PageLayout heroTitle="Organizing Committee" headingTitle="Organizing Committee">

@@ -108,7 +108,7 @@ export default function InvitationPage() {
               <span className="bg-[#650010] text-white text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full mb-4">
                 Chief Guest
               </span>
-              <div className="w-[150px] h-[150px] relative rounded-full overflow-hidden border-4 border-[#650010] shadow-md mb-4 shrink-0">
+              <div className="w-37.5 h-37.5 relative rounded-full overflow-hidden border-4 border-[#650010] shadow-md mb-4 shrink-0">
                 <Image
                   src="/speakers/laxmidhar-behera.jpg"
                   alt="Prof. Laxmidhar Behera"
@@ -136,7 +136,7 @@ export default function InvitationPage() {
               <span className="bg-[#650010] text-white text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full mb-4">
                 Guest of Honor
               </span>
-              <div className="w-[150px] h-[150px] relative rounded-full overflow-hidden border-4 border-[#650010] shadow-md mb-4 shrink-0">
+              <div className="w-37.5 h-37.5 relative rounded-full overflow-hidden border-4 border-[#650010] shadow-md mb-4 shrink-0">
                 <Image
                   src="/speakers/mallikarjuna-rao.jpg"
                   alt="Mr. G. Mallikarjuna Rao"
@@ -183,7 +183,7 @@ export default function InvitationPage() {
 
                   {/* Speaker Details */}
                   <div className="flex items-center gap-4">
-                    <div className="w-[110px] h-[110px] relative rounded-full overflow-hidden border-4 border-[#650010] shrink-0 shadow-sm">
+                    <div className="w-27.5 h-27.5 relative rounded-full overflow-hidden border-4 border-[#650010] shrink-0 shadow-sm">
                       <Image
                         src={spk.image}
                         alt={spk.name}

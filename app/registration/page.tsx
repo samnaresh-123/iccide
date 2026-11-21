@@ -3,7 +3,7 @@ import { PageLayout } from "@/components/PageLayout";
 export default function RegistrationPage() {
   return (
     <PageLayout heroTitle="Registration" headingTitle="Registration">
-      <table className="border border-gray-500 text-[10px] sm:text-[14px] lg:text-[16px] max-w-[750px]">
+      <table className="border border-gray-500 text-[10px] sm:text-[14px] lg:text-[16px] max-w-187.5">
         <thead>
           <tr>
             <th className="p-2 sm:p-5 border border-gray-500">Category</th>

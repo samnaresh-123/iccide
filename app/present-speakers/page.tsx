@@ -77,7 +77,7 @@ export default function PresentSpeakersPage() {
                 key={d.name}
                 className="bg-white rounded-2xl p-6 shadow-md border-2 border-[#650010] flex flex-col sm:flex-row items-center sm:items-start gap-5"
               >
-                <div className="w-[130px] h-[130px] sm:w-[140px] sm:h-[140px] relative rounded-full overflow-hidden border-4 border-[#650010] shrink-0 shadow-sm">
+                <div className="w-32.5 h-32.5 sm:w-35 sm:h-35 relative rounded-full overflow-hidden border-4 border-[#650010] shrink-0 shadow-sm">
                   <Image
                     src={d.img}
                     alt={d.name}
@@ -123,7 +123,7 @@ export default function PresentSpeakersPage() {
               >
                 <div>
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
-                    <div className="w-[120px] h-[120px] relative rounded-full overflow-hidden border-4 border-[#650010] shrink-0 shadow-sm">
+                    <div className="w-30 h-30 relative rounded-full overflow-hidden border-4 border-[#650010] shrink-0 shadow-sm">
                       <Image
                         src={s.img}
                         alt={s.name}

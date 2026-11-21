@@ -3,18 +3,37 @@ import { PageLayout } from "@/components/PageLayout";
 export default function ContactUsPage() {
   return (
     <PageLayout heroTitle="Contact Us" headingTitle="Contact Us">
-      <div className="font-serif text-[14px] sm:text-[16px] lg:text-[18px] space-y-4">
-        <p className="font-semibold text-[#650010] text-[18px] sm:text-[22px]">VIT-AP University</p>
-        <p>Near Vijayawada - 522241, Andhra Pradesh, India</p>
-        <p><strong>Email:</strong> iccide@vitap.ac.in</p>
-        <p><strong>Phone:</strong> +91-863-2344700</p>
-        <div className="w-full h-[300px] mt-4">
-          <iframe
-            className="w-full h-full"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.6106982247265!2d80.49881150582188!3d16.495238672470556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f27d40f21c55%3A0x1490eacd54859850!2sVIT-AP%20University!5e0!3m2!1sen!2sin!4v1696503206483!5m2!1sen!2sin"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+      <div className="p-3.75 w-full h-full flex flex-col justify-center items-center text-center gap-7.5 font-serif">
+        <div>
+          <h2 className="text-[20px] sm:text-[24px] lg:text-[30px] font-semibold text-[#650010]">
+            Conference Chair
+          </h2>
+          <p className="text-[16px] sm:text-[18px] lg:text-[22px] font-serif font-medium">
+            Dr. Nagaraju Devarakonda, VIT-AP University
+          </p>
+        </div>
+        <div>
+          <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] text-[#650010] font-semibold font-serif pb-2.5">
+            School of Computer Science and Engineering (SCOPE)
+          </h2>
+          <h3 className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium">
+            VIT-AP University
+          </h3>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px]">
+            Beside AP Secretariat, Near Vijayawada
+          </p>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px]">
+            Andhra Pradesh, INDIA,
+          </p>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px]">
+            Pin Code: 522237
+          </p>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px]">
+            Email: iccide@vitap.ac.in
+          </p>
+          <p className="text-[14px] sm:text-[16px] lg:text-[18px]">
+            Phone: +91 9441176913
+          </p>
         </div>
       </div>
     </PageLayout>

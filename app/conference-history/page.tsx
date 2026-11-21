@@ -150,7 +150,7 @@ export default function ConferenceHistoryPage() {
                   href={conf.proceedingsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-[#650010] underline font-medium hover:text-[#4a000b] break-words"
+                  className="text-[#650010] underline font-medium hover:text-[#4a000b] wrap-break-word"
                 >
                   {conf.proceedingsSeries}
                 </a>
