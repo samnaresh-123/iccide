@@ -25,8 +25,8 @@ export default function PresentSpeakersPage() {
     {
       name: "Prof. Piotr A. Kowalski",
       designation: "Professor",
-      affiliation: "Faculty of Physics and Applied Computer Science, AGH University of Science and Technology, Krakow, Poland",
-      topic: "To be announced",
+      affiliation: "Faculty of Physics and Applied Computer Science, AGH University of Krakow, Poland",
+      topic: "Sensitivity Analysis for Neural Network Interpretability and Pruning",
       time: "27th November, 11:00 AM IST",
       img: "/speakers/piotr-kowalski.jpg",
       badge: "Keynote Address I",
