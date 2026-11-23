@@ -13,14 +13,14 @@ interface KeynoteSpeaker {
 
 const keynotes: KeynoteSpeaker[] = [
   {
-    topic: "Keynote Address (Topic: To be announced)",
+    topic: "Sensitivity Analysis for Neural Network Interpretability and Pruning",
     time: "11:00 AM IST",
     date: "27th November 2026",
     name: "Prof. Piotr A. Kowalski",
     role: "Professor",
     affiliation: [
       "Faculty of Physics and Applied Computer Science",
-      "AGH University of Science and Technology, Krakow, Poland",
+      "AGH University of Krakow, Poland",
     ],
     image: "/speakers/piotr-kowalski.jpg",
   },

@@ -33,8 +33,8 @@ export default function ProgramSchedulePage() {
       speaker: (
         <div>
           <p className="font-semibold text-[#650010]">Prof. Piotr A. Kowalski</p>
-          <p className="text-xs text-gray-600">Professor, AGH University of Science &amp; Technology, Poland</p>
-          <p className="text-xs italic text-gray-500 mt-0.5">Topic: Keynote Address</p>
+          <p className="text-xs text-gray-600">Professor, AGH University of Krakow, Poland</p>
+          <p className="text-xs font-medium text-gray-800 mt-0.5">Topic: &quot;Sensitivity Analysis for Neural Network Interpretability and Pruning&quot;</p>
         </div>
       ),
       venue: "Main Auditorium",

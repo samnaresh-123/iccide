@@ -179,7 +179,7 @@ export default function Home() {
             {
               role: "Keynote Address I",
               name: "Prof. Piotr A. Kowalski",
-              title: "Professor, AGH University",
+              title: "Professor, AGH University of Krakow",
               sub: "Krakow, Poland (27th Nov, 11 AM)",
               img: "/speakers/piotr-kowalski.jpg",
             },
