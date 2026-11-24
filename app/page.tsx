@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Carousel */}
-      <HeroSlider title="7th International Conference On Computational Intelligence & Data Engineering (ICCIDE-2026)" />
+      <HeroSlider title="7th International Conference On Computational Intelligence & Data Engineering (ICCIDE-2026)" date="27th – 28th November 2026" />
 
       {/* Theme + Quick Links */}
       <div className="w-full max-h-[1800px]">

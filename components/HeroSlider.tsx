@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 
 interface HeroSliderProps {
   title: string;
+  date?: string;
 }
 
 const slides = [
@@ -12,7 +13,7 @@ const slides = [
   { id: 4, imgUrl: "/pic1.avif" },
 ];
 
-export default function HeroSlider({ title }: HeroSliderProps) {
+export default function HeroSlider({ title, date }: HeroSliderProps) {
   const [current, setCurrent] = useState(0);
 
   const prev = useCallback(() => {
@@ -95,9 +96,16 @@ export default function HeroSlider({ title }: HeroSliderProps) {
         </button>
 
         {/* Title Overlay */}
-        <h1 className="text-[16px] sm:text-[22px] lg:text-[28px] mx-[30px] font-serif font-semibold text-white max-w-[700px] z-10 drop-shadow-md">
-          {title}
-        </h1>
+        <div className="flex flex-col items-center gap-2 z-10 mx-[30px] max-w-[700px]">
+          <h1 className="text-[16px] sm:text-[22px] lg:text-[28px] font-serif font-semibold text-white drop-shadow-md text-center">
+            {title}
+          </h1>
+          {date && (
+            <p className="text-[15px] sm:text-[19px] lg:text-[22px] font-serif font-medium text-white/95 drop-shadow-md tracking-wide">
+              {date}
+            </p>
+          )}
+        </div>
 
         {/* Slide Indicators */}
         <div className="absolute bottom-3 flex gap-2 z-20">
