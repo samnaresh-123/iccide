@@ -34,7 +34,7 @@ export default function AcceptedPapersList() {
             placeholder="Search by ID, Title, or Author..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full md:w-[260px] px-3 py-1.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#650010] font-sans"
+            className="w-full md:w-65 px-3 py-1.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#650010] font-sans"
           />
           <span className="bg-[#650010] text-white text-xs font-bold px-2.5 py-1.5 rounded-lg whitespace-nowrap">
             {filtered.length} Papers
@@ -45,8 +45,8 @@ export default function AcceptedPapersList() {
       {/* Scrollable Table Container */}
       <div className="w-full relative bg-white rounded-2xl border border-gray-300 shadow-sm overflow-hidden">
         {/* Scrollable inner wrapper with fixed height and sticky header */}
-        <div className="max-h-[480px] sm:max-h-[520px] overflow-y-auto overflow-x-auto scroll-smooth">
-          <table className="w-full text-left border-collapse table-auto min-w-[550px]">
+        <div className="max-h-120 sm:max-h-130 overflow-y-auto overflow-x-auto scroll-smooth">
+          <table className="w-full text-left border-collapse table-auto min-w-137.5">
             <thead className="sticky top-0 z-10 shadow-sm">
               <tr className="bg-[#650010] text-white text-xs uppercase tracking-wider">
                 <th className="p-3 w-[15%] text-center whitespace-nowrap">Paper ID</th>
@@ -74,10 +74,10 @@ export default function AcceptedPapersList() {
                     <td className="p-3 text-center font-bold text-[#650010] whitespace-nowrap align-top">
                       #{paper.id}
                     </td>
-                    <td className="p-3 font-semibold text-gray-900 leading-snug align-top break-words">
+                    <td className="p-3 font-semibold text-gray-900 leading-snug align-top wrap-break-word">
                       {paper.title}
                     </td>
-                    <td className="p-3 text-xs text-gray-700 leading-relaxed font-sans align-top break-words">
+                    <td className="p-3 text-xs text-gray-700 leading-relaxed font-sans align-top wrap-break-word">
                       {paper.authors}
                     </td>
                   </tr>

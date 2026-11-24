@@ -1,228 +1,146 @@
 import { PageLayout } from "@/components/PageLayout";
 
+const day1 = [
+  { time: "9:00 – 9:30 AM",      event: "Registration" },
+  { time: "9:30 – 10:30 AM",     event: "Inaugural Ceremony" },
+  { time: "10:30 – 11:00 AM",    event: "Andhra Pradesh Traditional Show" },
+  { time: "11:00 – 11:15 AM",    event: "HiTea" },
+  {
+    time: "11:15 AM – 12:30 PM",
+    event: "Keynote #01",
+    detail: "Prof. Piotr Andrzej Kowalski — AGH University of Krakow",
+    talk: "Sensitivity Analysis for Neural Network Interpretability and Pruning",
+  },
+  {
+    time: "12:30 – 1:30 PM",
+    event: "Technical Sessions 1 & 2",
+    detail:
+      "Session 1 — Coordinator: Prof. Arindam Dey | Chair: Prof. Edara Sreenivasa Reddy | Co-Chair: Prof. Reeja S. R. | Papers: 11, 17, 101, 207, 276, 278\n" +
+      "Session 2 — Coordinator: Prof. Azees Maria John Francis | Chair: Prof. Hari Seetha | Co-Chair: Prof. Kuppusamy P | Papers: 311, 378, 406, 410, 425",
+  },
+  { time: "1:30 – 2:30 PM",      event: "Lunch Break" },
+  {
+    time: "2:30 – 3:30 PM",
+    event: "Keynote #02",
+    detail: "Dr. T V Gopal — Mahindra University, Hyderabad, India",
+    talk: "Contextualisation and Interpretation of Data - A Data Spaces Perspective",
+  },
+  { time: "3:30 – 3:45 PM",      event: "Coffee Break" },
+  {
+    time: "3:45 – 5:00 PM",
+    event: "Technical Sessions 3 & 4",
+    detail:
+      "Session 3 — Coordinator: Prof. P. Lalitha Kumari | Chair: Prof. G. Muneeswari | Co-Chair: Prof. Surendra Reddy Vinta | Papers: 458, 542, 552, 451, 548, 467\n" +
+      "Session 4 — Coordinator: Prof. Bolem Sai Chandana | Chair: Prof. Suresh Dara | Co-Chair: Prof. Aravapalli Rama Satish | Papers: 494, 496, 511, 527, 444, 457",
+  },
+  { time: "5:00 – 6:00 PM",      event: "Cultural Programme" },
+  { time: "7:00 PM",             event: "Gala Dinner" },
+];
+
+const day2 = [
+  {
+    time: "10:00 – 11:00 AM",
+    event: "Keynote #03",
+    detail: "Mr. SatyaBharat Mudivarthi — Technology Fellow, Engineering as a Service, Deloitte – USI – Hyderabad",
+    talk: "AI and Cloud Enterprise Adoption and the Future Engineer",
+  },
+  { time: "11:00 – 11:30 AM",    event: "Coffee Break" },
+  {
+    time: "11:30 AM – 1:00 PM",
+    event: "Technical Sessions 5 & 6",
+    detail:
+      "Session 5 — Coordinator: Prof. Asish Kumar Dalai | Chair: Prof. Bharathi V C | Co-Chair: Prof. Tarun Kumar Shankar | Papers: 443, 448, 316, 375, 550, 533, 402, 409\n" +
+      "Session 6 — Coordinator: Prof. Kartika Natarjan | Chair: Prof. Anil Vitthalrao Turukmane | Co-Chair: Prof. Eswaraiah Rayachoti | Papers: 59, 61, 66, 118, 262, 275",
+  },
+  { time: "1:00 – 2:00 PM",      event: "Lunch Break" },
+  {
+    time: "",
+    event: "Keynote #04",
+    detail: "Ms. Sharon Suresh — Google Lab, Pune, India",
+    talk: "Adversarial Intelligence at Scale: Graph Topology, Behavioral Modeling, and Multimodal Forensics in Modern Fraud Detection",
+  },
+  { time: "2:00 – 2:30 PM",      event: "Coffee Break" },
+  {
+    time: "2:30 – 4:00 PM",
+    event: "Technical Sessions 7 & 8",
+    detail:
+      "Session 7 — Coordinator: Prof. Monali Bordoloi | Chair: Prof. Ganesh Reddy Karri | Co-Chair: Prof. R. Nanda Kumar | Papers: 279, 293, 345, 346, 367, 411, 476\n" +
+      "Session 8 — Coordinator: Prof. Marriboyina Sreedevi | Chair: Prof. Harikiran Jonnadula | Co-Chair: Prof. Udit Narayan Kar | Co-Chair: Prof. Anand J Kulkarni (MIT Pune) | Papers: 499, 536, 537, 555, 563, 248",
+  },
+  { time: "4:00 – 4:30 PM",      event: "Valedictory Session" },
+];
+
+type Row = {
+  time: string;
+  event: string;
+  detail?: string;
+  talk?: string;
+};
+
+function ScheduleTable({ rows }: { rows: Row[] }) {
+  return (
+    <div className="overflow-x-auto rounded-b-xl border border-gray-200 shadow-sm">
+      <table className="w-full text-left border-collapse text-sm">
+        <thead>
+          <tr className="bg-gray-100 text-gray-700 text-xs uppercase tracking-wider border-b">
+            <th className="p-3 w-[20%]">Time (IST)</th>
+            <th className="p-3">Event / Details</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-200">
+          {rows.map((row, idx) => (
+            <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+              <td className="p-3 font-medium text-[#650010] whitespace-nowrap align-top text-xs sm:text-sm">
+                {row.time || "—"}
+              </td>
+              <td className="p-3 align-top">
+                <p className="font-semibold text-gray-900">{row.event}</p>
+                {row.detail &&
+                  row.detail.split("\n").map((line, i) => (
+                    <p key={i} className="text-xs text-gray-600 mt-0.5">{line}</p>
+                  ))}
+                {row.talk && (
+                  <p className="text-xs text-gray-700 mt-0.5 italic">&ldquo;{row.talk}&rdquo;</p>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export default function ProgramSchedulePage() {
-  const day1Schedule = [
-    {
-      time: "08:30 AM - 09:30 AM",
-      session: "Registration & Welcome Kit Distribution",
-      speaker: "Organizing Committee",
-      venue: "Registration Desk, Main Lobby",
-    },
-    {
-      time: "09:30 AM - 10:45 AM",
-      session: "Inaugural Ceremony",
-      speaker: (
-        <div>
-          <p className="font-semibold text-[#650010]">Chief Guest: Prof. Laxmidhar Behera</p>
-          <p className="text-xs text-gray-600">Director, IIT Mandi</p>
-          <p className="font-semibold text-[#650010] mt-1">Guest of Honor: Mr. G. Mallikarjuna Rao</p>
-          <p className="text-xs text-gray-600">Scientist, RCI, DRDO, Hyderabad</p>
-        </div>
-      ),
-      venue: "Main Auditorium",
-    },
-    {
-      time: "10:45 AM - 11:00 AM",
-      session: "High Tea Break",
-      speaker: "—",
-      venue: "Foyer Area",
-    },
-    {
-      time: "11:00 AM - 12:00 PM",
-      session: "Keynote Address I",
-      speaker: (
-        <div>
-          <p className="font-semibold text-[#650010]">Prof. Piotr A. Kowalski</p>
-          <p className="text-xs text-gray-600">Professor, AGH University of Krakow, Poland</p>
-          <p className="text-xs font-medium text-gray-800 mt-0.5">Topic: &quot;Sensitivity Analysis for Neural Network Interpretability and Pruning&quot;</p>
-        </div>
-      ),
-      venue: "Main Auditorium",
-    },
-    {
-      time: "12:00 PM - 01:00 PM",
-      session: "Technical Track I: Computational Intelligence (Oral Presentations)",
-      speaker: "Paper Authors & Session Chairs",
-      venue: "Seminar Halls 1 & 2",
-    },
-    {
-      time: "01:00 PM - 02:00 PM",
-      session: "Lunch Break",
-      speaker: "—",
-      venue: "University Cafeteria",
-    },
-    {
-      time: "02:00 PM - 03:00 PM",
-      session: "Keynote Address II",
-      speaker: (
-        <div>
-          <p className="font-semibold text-[#650010]">Mr. Satya Bharat Mudivarthi</p>
-          <p className="text-xs text-gray-600">Technology Fellow, Engineering as a Service, Deloitte USI</p>
-          <p className="text-xs font-medium text-gray-800 mt-0.5">
-            Topic: &quot;AI and Cloud Enterprise Adoption and the Future Engineer&quot;
-          </p>
-        </div>
-      ),
-      venue: "Main Auditorium",
-    },
-    {
-      time: "03:00 PM - 05:00 PM",
-      session: "Technical Track II: Data Engineering & Analytics (Oral Presentations)",
-      speaker: "Paper Authors & Session Chairs",
-      venue: "Seminar Halls 1 & 2",
-    },
-  ];
-
-  const day2Schedule = [
-    {
-      time: "09:30 AM - 10:00 AM",
-      session: "Morning Assembly & Announcements",
-      speaker: "Session Coordinators",
-      venue: "Main Auditorium",
-    },
-    {
-      time: "10:00 AM - 11:00 AM",
-      session: "Keynote Address III",
-      speaker: (
-        <div>
-          <p className="font-semibold text-[#650010]">Dr. T V Gopal</p>
-          <p className="text-xs text-gray-600">Adjunct Professor, Mahindra University, Hyderabad</p>
-          <p className="text-xs font-medium text-gray-800 mt-0.5">
-            Topic: &quot;Contextualisation and Interpretation of Data - A Data Spaces Perspective&quot;
-          </p>
-        </div>
-      ),
-      venue: "Main Auditorium",
-    },
-    {
-      time: "11:00 AM - 11:15 AM",
-      session: "Tea Break",
-      speaker: "—",
-      venue: "Foyer Area",
-    },
-    {
-      time: "11:15 AM - 01:00 PM",
-      session: "Technical Track III: Deep Learning, Cyber Security & IoT",
-      speaker: "Paper Authors & Session Chairs",
-      venue: "Seminar Halls 1 & 2",
-    },
-    {
-      time: "01:00 PM - 02:00 PM",
-      session: "Lunch Break",
-      speaker: "—",
-      venue: "University Cafeteria",
-    },
-    {
-      time: "02:00 PM - 03:00 PM",
-      session: "Keynote Address IV",
-      speaker: (
-        <div>
-          <p className="font-semibold text-[#650010]">Ms. Sharon Suresh</p>
-          <p className="text-xs text-gray-600">Engineering Analyst, Google, Bengaluru</p>
-          <p className="text-xs font-medium text-gray-800 mt-0.5">
-            Title: &quot;Adversarial Intelligence at Scale: Graph Topology, Behavioral Modeling, and Multimodal Forensics in Modern Fraud Detection&quot;
-          </p>
-        </div>
-      ),
-      venue: "Main Auditorium",
-    },
-    {
-      time: "03:00 PM - 04:30 PM",
-      session: "Technical Track IV: Emerging Trends in AI & Big Data",
-      speaker: "Paper Authors & Session Chairs",
-      venue: "Seminar Halls 1 & 2",
-    },
-    {
-      time: "04:30 PM - 05:30 PM",
-      session: "Valedictory Ceremony & Best Paper Awards",
-      speaker: "Conference Chairs & Dignitaries",
-      venue: "Main Auditorium",
-    },
-  ];
-
   return (
     <PageLayout heroTitle="Program Schedule" headingTitle="Conference Program Schedule">
-      <div className="font-serif space-y-8 text-[14px] sm:text-[15px] lg:text-[16px]">
-        
-        {/* Intro */}
+      <div className="font-serif space-y-8 text-[14px] sm:text-[15px]">
+
         <div className="bg-white p-4 rounded-xl border border-[#650010]/20 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div>
-            <p className="font-bold text-[#650010] text-[16px]">
-              7th ICCIDE - 2026 Schedule
-            </p>
-            <p className="text-xs text-gray-600">
-              Dates: 27th &amp; 28th November 2026 | All times are in Indian Standard Time (IST)
+            <p className="font-bold text-[#650010] text-[16px]">7th ICCIDE – 2026 Schedule</p>
+            <p className="text-xs text-gray-600 mt-0.5">
+              27th &amp; 28th November 2026 &nbsp;|&nbsp; All times are Indian Standard Time (IST)
             </p>
           </div>
-          <span className="bg-[#650010] text-white text-xs font-bold px-3 py-1 rounded-full">
-            Confirmed Sessions
-          </span>
+      
         </div>
 
         {/* Day 1 */}
         <div>
-          <div className="bg-[#650010] text-white px-4 py-3 rounded-t-xl font-bold flex justify-between items-center">
+          <div className="bg-[#650010] text-white px-4 py-3 rounded-t-xl font-bold flex flex-wrap justify-between items-center gap-1">
             <span>Day 1 — Friday, 27th November 2026</span>
-            <span className="text-xs font-normal opacity-90">Inauguration &amp; Keynotes I &amp; II</span>
+            <span className="text-xs font-normal opacity-80">Venue: AB2 Auditorium (Tanguri Prakash)</span>
           </div>
-          <div className="overflow-x-auto bg-white rounded-b-xl border border-gray-300 shadow-sm">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-gray-100 text-gray-700 text-xs uppercase tracking-wider border-b">
-                  <th className="p-3 w-[22%]">Time (IST)</th>
-                  <th className="p-3 w-[45%]">Session Details</th>
-                  <th className="p-3 w-[33%]">Speaker / Remarks</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {day1Schedule.map((row, idx) => (
-                  <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-[#E6CFCF]/20"}>
-                    <td className="p-3 font-semibold text-[#650010] whitespace-nowrap text-xs sm:text-sm">
-                      {row.time}
-                    </td>
-                    <td className="p-3 font-medium text-gray-900">
-                      {row.session}
-                      <p className="text-[11px] text-gray-500 mt-0.5">Venue: {row.venue}</p>
-                    </td>
-                    <td className="p-3 text-sm">{row.speaker}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ScheduleTable rows={day1} />
         </div>
 
         {/* Day 2 */}
         <div>
-          <div className="bg-[#650010] text-white px-4 py-3 rounded-t-xl font-bold flex justify-between items-center">
-            <span>Day 2 — Saturday, 28th November 2026</span>
-            <span className="text-xs font-normal opacity-90">Keynotes III &amp; IV &amp; Valedictory</span>
+          <div className="bg-[#650010] text-white px-4 py-3 rounded-t-xl font-bold">
+            Day 2 — Saturday, 28th November 2026
           </div>
-          <div className="overflow-x-auto bg-white rounded-b-xl border border-gray-300 shadow-sm">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-gray-100 text-gray-700 text-xs uppercase tracking-wider border-b">
-                  <th className="p-3 w-[22%]">Time (IST)</th>
-                  <th className="p-3 w-[45%]">Session Details</th>
-                  <th className="p-3 w-[33%]">Speaker / Remarks</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {day2Schedule.map((row, idx) => (
-                  <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-[#E6CFCF]/20"}>
-                    <td className="p-3 font-semibold text-[#650010] whitespace-nowrap text-xs sm:text-sm">
-                      {row.time}
-                    </td>
-                    <td className="p-3 font-medium text-gray-900">
-                      {row.session}
-                      <p className="text-[11px] text-gray-500 mt-0.5">Venue: {row.venue}</p>
-                    </td>
-                    <td className="p-3 text-sm">{row.speaker}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ScheduleTable rows={day2} />
         </div>
 
       </div>
