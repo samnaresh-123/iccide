@@ -15,8 +15,8 @@ const day1 = [
     time: "12:30 – 1:30 PM",
     event: "Technical Sessions 1 & 2",
     detail:
-      "Session 1 (CB-318A) — Coordinator: Prof. Arindam Dey | Chair 1: Prof. Edara Sreenivasa Reddy | Chair 2: Prof. Reeja S. R. | Papers: 17, 101, 276, 278\n" +
-      "Session 2 (CB-318B) — Coordinator: Prof. Azees Maria John Francis | Chair 1: Prof. Hari Seetha | Chair 2: Prof. Kuppusamy P | Papers: 311, 406, 410, 425",
+      "Session 1 (Offline · CB-318A) — Coordinator: Prof. Arindam Dey | Chair 1: Prof. Edara Sreenivasa Reddy | Chair 2: Prof. Reeja S. R. | Papers: 17, 101, 276, 278\n" +
+      "Session 2 (Offline · CB-318B) — Coordinator: Prof. Azees Maria John Francis | Chair 1: Prof. Hari Seetha | Chair 2: Prof. Kuppusamy P | Papers: 311, 406, 410, 425",
   },
   { time: "1:30 – 2:30 PM",      event: "Lunch Break" },
   {
@@ -30,8 +30,8 @@ const day1 = [
     time: "3:45 – 5:00 PM",
     event: "Technical Sessions 3 & 4",
     detail:
-      "Session 3 (CB-318A) — Coordinator: Prof. P. Lalitha Kumari | Chair 1: Prof. G. Muneeswari | Chair 2: Prof. Surendra Reddy Vinta | Papers: 451, 458, 467, 542, 552\n" +
-      "Session 4 (CB-318B) — Coordinator: Prof. Bolem Sai Chandana | Chair 1: Prof. Suresh Dara | Chair 2: Prof. Aravapalli Rama Satish | Papers: 444, 457, 494, 496, 511, 527",
+      "Session 3 (Offline · CB-318A) — Coordinator: Prof. P. Lalitha Kumari | Chair 1: Prof. G. Muneeswari | Chair 2: Prof. Surendra Reddy Vinta | Papers: 451, 458, 467, 542, 552\n" +
+      "Session 4 (Offline · CB-318B) — Coordinator: Prof. Bolem Sai Chandana | Chair 1: Prof. Suresh Dara | Chair 2: Prof. Aravapalli Rama Satish | Papers: 444, 457, 494, 496, 511, 527",
   },
   { time: "5:00 – 6:00 PM",      event: "Cultural Programme" },
   { time: "7:00 PM",             event: "Gala Dinner" },
@@ -49,8 +49,9 @@ const day2 = [
     time: "11:30 AM – 1:00 PM",
     event: "Technical Sessions 5 & 6",
     detail:
-      "Session 5 (CB-318A) — Coordinator: Prof. Asish Kumar Dalai | Chair 1: Prof. Bharathi V C | Chair 2: Prof. Tarun Kumar Shankar | Papers: 316, 375, 378, 402, 409, 443, 448, 533, 550\n" +
-      "Session 6 (CB-318B) — Coordinator: Prof. Kartika Natarjan | Chair 1: Prof. Anil Vitthalrao Turukmane | Chair 2: Prof. Eswaraiah Rayachoti | Papers: 11, 59, 61, 66, 118, 262, 275, 548",
+      "Session 5 (Offline · CB-318A) — Coordinator: Prof. Asish Kumar Dalai | Chair 1: Prof. Bharathi V C | Chair 2: Prof. Tarun Narayan Shankar | Papers: 316, 375, 378, 402, 409, 443, 448, 533, 550\n" +
+      "Session 6 (Online · CB-318B) — Coordinator: Prof. Kartika Natarjan | Chair 1: Prof. Anil Vitthalrao Turukmane | Chair 2: Prof. Harikiran Jonnadula | Papers: 11, 59, 61, 66, 118, 262, 275, 548\n" +
+      "Session 6 Meeting link: https://meet.google.com/mzh-skiw-ctw",
   },
   { time: "1:00 – 2:00 PM",      event: "Lunch Break" },
   {
@@ -64,8 +65,10 @@ const day2 = [
     time: "2:30 – 4:00 PM",
     event: "Technical Sessions 7 & 8",
     detail:
-      "Session 7 (CB-318A) — Coordinator: Prof. Monali Bordoloi | Chair 1: Prof. Ganesh Reddy Karri | Chair 2: Prof. R. Nanda Kumar | Papers: 279, 293, 345, 346, 367, 411, 476\n" +
-      "Session 8 (CB-318B) — Coordinator: Prof. Marriboyina Sreedevi | Chair 1: Prof. Harikiran Jonnadula | Chair 2: Prof. Udit Narayan Kar | Chair 3: Prof. Anand J Kulkarni (MIT Pune) | Papers: 248, 276, 499, 536, 537, 555, 563",
+      "Session 7 (Online · CB-318A) — Coordinator: Prof. Monali Bordoloi | Chair 1: Prof. Ganesh Reddy Karri | Chair 2: Prof. R. Nanda Kumar | Papers: 279, 293, 345, 346, 367, 411, 476, 207\n" +
+      "Session 7 Meeting link: https://meet.google.com/qkt-dnyo-fdx\n" +
+      "Session 8 (Online · CB-318B) — Coordinator: Marriboyina Sreedevi | Chair 1: Prof. Eswaraiah Rayachoti | Chair 2: Prof. Udit Narayan Kar | Chair 3: Prof. Anand J Kulkarni (MIT Pune) | Papers: 248, 499, 536, 537, 555, 563\n" +
+      "Session 8 Meeting link: https://meet.google.com/uoh-xkze-xfz",
   },
   { time: "4:00 – 4:30 PM",      event: "Valedictory Session" },
 ];
@@ -77,16 +80,34 @@ type Row = {
   talk?: string;
 };
 
-/** Renders a detail line, bolding any venue token like (CB-318A) or (CB-318B). */
+/**
+ * Renders a detail line:
+ *  - bolds the mode/venue token, e.g. (Offline · CB-318A) or (Online · CB-318B)
+ *  - turns any https:// URL into a clickable link
+ */
 function DetailLine({ text }: { text: string }) {
-  const parts = text.split(/(\(CB-[^\)]+\))/g);
+  const parts = text.split(/(\((?:Offline|Online) · CB-[^)]+\)|https?:\/\/\S+)/g);
   return (
-    <p className="text-xs text-gray-600 mt-0.5">
-      {parts.map((part, i) =>
-        /^\(CB-[^\)]+\)$/.test(part)
-          ? <strong key={i} className="font-bold text-gray-800">{part}</strong>
-          : part
-      )}
+    <p className="text-xs text-gray-600 mt-0.5 wrap-break-word">
+      {parts.map((part, i) => {
+        if (/^\((?:Offline|Online) · CB-[^)]+\)$/.test(part)) {
+          return <strong key={i} className="font-bold text-gray-800">{part}</strong>;
+        }
+        if (/^https?:\/\//.test(part)) {
+          return (
+            <a
+              key={i}
+              href={part}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#650010] underline font-medium"
+            >
+              {part}
+            </a>
+          );
+        }
+        return part;
+      })}
     </p>
   );
 }
@@ -136,8 +157,10 @@ export default function ProgramSchedulePage() {
             <p className="text-xs text-gray-600 mt-0.5">
               27th &amp; 28th November 2026 &nbsp;|&nbsp; All times are Indian Standard Time (IST)
             </p>
+            <p className="text-xs text-gray-600 mt-0.5">
+              Technical session venue: Mahatma Gandhi Block (CB), Room 318 A / 318 B
+            </p>
           </div>
-      
         </div>
 
         {/* Day 1 */}
