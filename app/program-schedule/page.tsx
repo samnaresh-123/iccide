@@ -1,12 +1,11 @@
 import { PageLayout } from "@/components/PageLayout";
 
 const day1 = [
-  { time: "9:00 – 9:30 AM",      event: "Registration" },
-  { time: "9:30 – 10:30 AM",     event: "Inaugural Ceremony" },
-  { time: "10:30 – 11:00 AM",    event: "Andhra Pradesh Traditional Show" },
-  { time: "11:00 – 11:15 AM",    event: "HiTea" },
+  { time: "9:00 – 9:45 AM",      event: "Registration" },
+  { time: "10:00 – 11:30 AM",    event: "Inaugural Ceremony" },
+  { time: "11:30 – 11:45 AM",    event: "HiTea" },
   {
-    time: "11:15 AM – 12:30 PM",
+    time: "11:45 AM – 12:30 PM",
     event: "Keynote #01",
     detail:
       "Prof. Piotr Andrzej Kowalski — AGH University of Krakow\n" +
@@ -78,7 +77,7 @@ const day2 = [
     detail:
       "Session 10 (Online · CB-318A) — Coordinator: Prof. Monali Bordoloi | Chair 1: Prof. Ganesh Reddy Karri | Chair 2: Prof. R. Nanda Kumar | Papers: 279, 293, 345, 346, 367, 411, 476, 207\n" +
       "Session 10 Meeting link: https://meet.google.com/qkt-dnyo-fdx\n" +
-      "Session 11 (Online · CB-318B) — Coordinator: Prof. Marriboyina Sreedevi | Chair 1: Prof. Eswaraiah Rayachoti | Chair 2: Prof. Udit Narayan Kar | Chair 3: Prof. Anand J Kulkarni (MIT Pune) | Papers: 248, 499, 536, 537, 555, 563\n" +
+      "Session 11 (Online · CB-318B) — Coordinator: Prof. Marriboyina Sreedevi | Chair 1: Prof. Eswaraiah Rayachoti | Chair 2: Prof. Udit Narayan Kar | Chair 3: Prof. Anand J Kulkarni (MIT Pune) (70301 29900) | Papers: 248, 499, 536, 537, 555, 563\n" +
       "Session 11 Meeting link: https://meet.google.com/uoh-xkze-xfz",
   },
   { time: "4:00 – 4:30 PM",      event: "Valedictory Session" },
