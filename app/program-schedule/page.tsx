@@ -15,23 +15,23 @@ const day1 = [
     time: "12:30 – 1:30 PM",
     event: "Technical Sessions 1 & 2",
     detail:
-      "Session 1 — Coordinator: Prof. Arindam Dey | Chair: Prof. Edara Sreenivasa Reddy | Co-Chair: Prof. Reeja S. R. | Papers: 11, 17, 101, 207, 276, 278\n" +
-      "Session 2 — Coordinator: Prof. Azees Maria John Francis | Chair: Prof. Hari Seetha | Co-Chair: Prof. Kuppusamy P | Papers: 311, 378, 406, 410, 425",
+      "Session 1 (CB-318A) — Coordinator: Prof. Arindam Dey | Chair 1: Prof. Edara Sreenivasa Reddy | Chair 2: Prof. Reeja S. R. | Papers: 17, 101, 276, 278\n" +
+      "Session 2 (CB-318B) — Coordinator: Prof. Azees Maria John Francis | Chair 1: Prof. Hari Seetha | Chair 2: Prof. Kuppusamy P | Papers: 311, 406, 410, 425",
   },
   { time: "1:30 – 2:30 PM",      event: "Lunch Break" },
   {
     time: "2:30 – 3:30 PM",
     event: "Keynote #02",
-    detail: "Dr. T V Gopal — Mahindra University, Hyderabad, India",
-    talk: "Contextualisation and Interpretation of Data - A Data Spaces Perspective",
+    detail: "Mr. SatyaBharat Mudivarthi — Technology Fellow, Engineering as a Service, Deloitte – USI – Hyderabad",
+    talk: "AI and Cloud Enterprise Adoption and the Future Engineer",
   },
   { time: "3:30 – 3:45 PM",      event: "Coffee Break" },
   {
     time: "3:45 – 5:00 PM",
     event: "Technical Sessions 3 & 4",
     detail:
-      "Session 3 — Coordinator: Prof. P. Lalitha Kumari | Chair: Prof. G. Muneeswari | Co-Chair: Prof. Surendra Reddy Vinta | Papers: 458, 542, 552, 451, 548, 467\n" +
-      "Session 4 — Coordinator: Prof. Bolem Sai Chandana | Chair: Prof. Suresh Dara | Co-Chair: Prof. Aravapalli Rama Satish | Papers: 494, 496, 511, 527, 444, 457",
+      "Session 3 (CB-318A) — Coordinator: Prof. P. Lalitha Kumari | Chair 1: Prof. G. Muneeswari | Chair 2: Prof. Surendra Reddy Vinta | Papers: 451, 458, 467, 542, 552\n" +
+      "Session 4 (CB-318B) — Coordinator: Prof. Bolem Sai Chandana | Chair 1: Prof. Suresh Dara | Chair 2: Prof. Aravapalli Rama Satish | Papers: 444, 457, 494, 496, 511, 527",
   },
   { time: "5:00 – 6:00 PM",      event: "Cultural Programme" },
   { time: "7:00 PM",             event: "Gala Dinner" },
@@ -41,20 +41,20 @@ const day2 = [
   {
     time: "10:00 – 11:00 AM",
     event: "Keynote #03",
-    detail: "Mr. SatyaBharat Mudivarthi — Technology Fellow, Engineering as a Service, Deloitte – USI – Hyderabad",
-    talk: "AI and Cloud Enterprise Adoption and the Future Engineer",
+    detail: "Dr. T V Gopal — Adjunct Professor, Dept. of CS & AI, Mahindra University, Hyderabad, India",
+    talk: "Contextualisation and Interpretation of Data - A Data Spaces Perspective",
   },
   { time: "11:00 – 11:30 AM",    event: "Coffee Break" },
   {
     time: "11:30 AM – 1:00 PM",
     event: "Technical Sessions 5 & 6",
     detail:
-      "Session 5 — Coordinator: Prof. Asish Kumar Dalai | Chair: Prof. Bharathi V C | Co-Chair: Prof. Tarun Kumar Shankar | Papers: 443, 448, 316, 375, 550, 533, 402, 409\n" +
-      "Session 6 — Coordinator: Prof. Kartika Natarjan | Chair: Prof. Anil Vitthalrao Turukmane | Co-Chair: Prof. Eswaraiah Rayachoti | Papers: 59, 61, 66, 118, 262, 275",
+      "Session 5 (CB-318A) — Coordinator: Prof. Asish Kumar Dalai | Chair 1: Prof. Bharathi V C | Chair 2: Prof. Tarun Kumar Shankar | Papers: 316, 375, 378, 402, 409, 443, 448, 533, 550\n" +
+      "Session 6 (CB-318B) — Coordinator: Prof. Kartika Natarjan | Chair 1: Prof. Anil Vitthalrao Turukmane | Chair 2: Prof. Eswaraiah Rayachoti | Papers: 11, 59, 61, 66, 118, 262, 275, 548",
   },
   { time: "1:00 – 2:00 PM",      event: "Lunch Break" },
   {
-    time: "",
+    time: "After Lunch",
     event: "Keynote #04",
     detail: "Ms. Sharon Suresh — Google Lab, Pune, India",
     talk: "Adversarial Intelligence at Scale: Graph Topology, Behavioral Modeling, and Multimodal Forensics in Modern Fraud Detection",
@@ -64,8 +64,8 @@ const day2 = [
     time: "2:30 – 4:00 PM",
     event: "Technical Sessions 7 & 8",
     detail:
-      "Session 7 — Coordinator: Prof. Monali Bordoloi | Chair: Prof. Ganesh Reddy Karri | Co-Chair: Prof. R. Nanda Kumar | Papers: 279, 293, 345, 346, 367, 411, 476\n" +
-      "Session 8 — Coordinator: Prof. Marriboyina Sreedevi | Chair: Prof. Harikiran Jonnadula | Co-Chair: Prof. Udit Narayan Kar | Co-Chair: Prof. Anand J Kulkarni (MIT Pune) | Papers: 499, 536, 537, 555, 563, 248",
+      "Session 7 (CB-318A) — Coordinator: Prof. Monali Bordoloi | Chair 1: Prof. Ganesh Reddy Karri | Chair 2: Prof. R. Nanda Kumar | Papers: 279, 293, 345, 346, 367, 411, 476\n" +
+      "Session 8 (CB-318B) — Coordinator: Prof. Marriboyina Sreedevi | Chair 1: Prof. Harikiran Jonnadula | Chair 2: Prof. Udit Narayan Kar | Chair 3: Prof. Anand J Kulkarni (MIT Pune) | Papers: 248, 276, 499, 536, 537, 555, 563",
   },
   { time: "4:00 – 4:30 PM",      event: "Valedictory Session" },
 ];
@@ -76,6 +76,20 @@ type Row = {
   detail?: string;
   talk?: string;
 };
+
+/** Renders a detail line, bolding any venue token like (CB-318A) or (CB-318B). */
+function DetailLine({ text }: { text: string }) {
+  const parts = text.split(/(\(CB-[^\)]+\))/g);
+  return (
+    <p className="text-xs text-gray-600 mt-0.5">
+      {parts.map((part, i) =>
+        /^\(CB-[^\)]+\)$/.test(part)
+          ? <strong key={i} className="font-bold text-gray-800">{part}</strong>
+          : part
+      )}
+    </p>
+  );
+}
 
 function ScheduleTable({ rows }: { rows: Row[] }) {
   return (
@@ -97,7 +111,7 @@ function ScheduleTable({ rows }: { rows: Row[] }) {
                 <p className="font-semibold text-gray-900">{row.event}</p>
                 {row.detail &&
                   row.detail.split("\n").map((line, i) => (
-                    <p key={i} className="text-xs text-gray-600 mt-0.5">{line}</p>
+                    <DetailLine key={i} text={line} />
                   ))}
                 {row.talk && (
                   <p className="text-xs text-gray-700 mt-0.5 italic">&ldquo;{row.talk}&rdquo;</p>
