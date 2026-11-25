@@ -14,7 +14,7 @@ export default function PresentSpeakersPage() {
     {
       role: "Guest of Honor",
       name: "Mr. G. Mallikarjuna Rao",
-      designation: "Scientist",
+      designation: "Scientist 'G'",
       affiliation: "Research Centre Imarat (RCI), DRDO, Hyderabad",
       img: "/speakers/mallikarjuna-rao.jpg",
       time: "27th Nov, Inaugural Ceremony (09:30 AM)",

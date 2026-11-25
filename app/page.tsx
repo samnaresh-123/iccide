@@ -172,7 +172,7 @@ export default function Home() {
             {
               role: "Guest of Honor - Inauguration",
               name: "Mr. G. Mallikarjuna Rao",
-              title: "Scientist, RCI, DRDO",
+              title: "Scientist 'G', RCI, DRDO",
               sub: "Hyderabad, India",
               img: "/speakers/mallikarjuna-rao.jpg",
             },

@@ -150,7 +150,7 @@ export default function InvitationPage() {
                 Mr. G. Mallikarjuna Rao
               </h3>
               <p className="text-[14px] font-semibold text-gray-900 mt-1">
-                Scientist
+                Scientist 'G'
               </p>
               <p className="text-[13px] text-gray-600 mt-2 leading-relaxed">
                 Research Centre Imarat (RCI)
