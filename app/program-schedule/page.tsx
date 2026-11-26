@@ -3,7 +3,7 @@ import { PageLayout } from "@/components/PageLayout";
 const day1 = [
   { time: "9:00 – 9:45 AM",      event: "Registration" },
   { time: "10:00 – 11:30 AM",    event: "Inaugural Ceremony" },
-  { time: "11:30 – 11:45 AM",    event: "HiTea" },
+  { time: "11:30 – 11:45 AM",    event: "High Tea" },
   {
     time: "11:45 AM – 12:30 PM",
     event: "Keynote #01",
@@ -35,8 +35,8 @@ const day1 = [
     event: "Technical Sessions 4, 5 & 6",
     detail:
       "Session 4 (Offline · CB-318A) — Coordinator: Prof. P. Lalitha Kumari | Chair 1: Prof. G. Muneeswari | Chair 2: Prof. Surendra Reddy Vinta | Papers: 458, 467, 542\n" +
-      "Session 5 (Offline · CB-318B) — Coordinator: Prof. Bolem Sai Chandana | Chair 1: Prof. Suresh Dara | Chair 2: Prof. Aravapalli Rama Satish | Papers: 444, 457, 494, 496\n" +
-      "Session 6 (Offline · CB-305) — Coordinator: Dr. Saroja Kumar Rout | Chair 1: Prof. Mithilesh Kumar Dubey | Chair 2: Prof. Tauseef Khan | Papers: 511, 527, 552",
+      "Session 5 (Offline · CB-318B) — Coordinator: Prof. Bolem Sai Chandana | Chair 1: Prof. Suresh Dara | Chair 2: Prof. Aravapalli Rama Satish | Papers: 444, 457, 494\n" +
+      "Session 6 (Offline · CB-305) — Coordinator: Dr. Saroja Kumar Rout | Chair 1: Prof. Mithilesh Kumar Dubey | Chair 2: Prof. Tauseef Khan | Papers: 496, 511, 527",
   },
   { time: "5:00 – 6:00 PM",      event: "Cultural Programme" },
   { time: "7:00 PM",             event: "Gala Dinner" },
@@ -58,26 +58,26 @@ const day2 = [
     detail:
       "Session 7 (Offline · CB-318A) — Coordinator: Prof. Asish Kumar Dalai | Chair 1: Prof. Bharathi V C | Chair 2: Prof. Tarun Narayan Shankar | Papers: 316, 375, 443, 448, 550\n" +
       "Session 8 (Offline · CB-305) — Coordinator: Dr. Srikanth Busa | Chair 1: Prof. Pamulapati Ashok Reddy | Chair 2: Prof. Kumar Debasis | Papers: 378, 402, 409, 533\n" +
-      "Session 9 (Online · CB-318B) — Coordinator: Prof. Kartika Natarjan | Chair 1: Prof. Anil Vitthalrao Turukmane | Chair 2: Prof. Harikiran Jonnadula | Papers: 11, 59, 61, 66, 118, 262, 275, 548\n" +
+      "Session 9 (Online · CB-318B) — Coordinator: Prof. Kartika Natarajan | Chair 1: Prof. Anil Vitthalrao Turukmane | Chair 2: Prof. Harikiran Jonnadula | Papers: 11, 59, 61, 66, 118, 262, 275, 548\n" +
       "Session 9 Meeting link: https://meet.google.com/mzh-skiw-ctw",
   },
   { time: "1:00 – 2:00 PM",      event: "Lunch Break" },
   {
-    time: "After Lunch",
+    time: "2:00 – 3:00 PM",
     event: "Keynote #04",
     detail:
       "Ms. Sharon Suresh — Google Lab, Pune, India\n" +
       "Coordinator: Dr. Bellamkonda Lakshmi Praveena | Venue: Mahatma Gandhi Block (CB)-305",
     talk: "Adversarial Intelligence at Scale: Graph Topology, Behavioral Modeling, and Multimodal Forensics in Modern Fraud Detection",
   },
-  { time: "2:00 – 2:30 PM",      event: "Coffee Break" },
+  { time: "3:00 – 3:30 PM",      event: "Coffee Break" },
   {
     time: "2:30 – 4:00 PM",
     event: "Technical Sessions 10 & 11",
     detail:
       "Session 10 (Online · CB-318A) — Coordinator: Prof. Monali Bordoloi | Chair 1: Prof. Ganesh Reddy Karri | Chair 2: Prof. R. Nanda Kumar | Papers: 279, 293, 345, 346, 367, 411, 476, 207\n" +
       "Session 10 Meeting link: https://meet.google.com/qkt-dnyo-fdx\n" +
-      "Session 11 (Online · CB-318B) — Coordinator: Prof. Marriboyina Sreedevi | Chair 1: Prof. Eswaraiah Rayachoti | Chair 2: Prof. Udit Narayan Kar | Chair 3: Prof. Anand J Kulkarni (MIT Pune) (70301 29900) | Papers: 248, 499, 536, 537, 555, 563\n" +
+      "Session 11 (Online · CB-318B) — Coordinator: Prof. Marriboyina Sreedevi | Chair 1: Prof. Eswaraiah Rayachoti | Chair 2: Prof. Udit Narayan Kar | Chair 3: Prof. Anand J Kulkarni (MIT Pune) (70301 29900) | Papers: 248, 499, 536, 537, 555, 563, 552\n" +
       "Session 11 Meeting link: https://meet.google.com/uoh-xkze-xfz",
   },
   { time: "4:00 – 4:30 PM",      event: "Valedictory Session" },

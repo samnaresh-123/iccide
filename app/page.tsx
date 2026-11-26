@@ -278,11 +278,11 @@ export default function Home() {
           </div>
           <div className="md:basis-[70%] bg-[#E6CFCF] md:ml-5 px-3.75 py-2.5">
             <div className="w-full text-center">
-              <h3 className="bg-[#650010] p-[10px] sm:py-[20px] sm:px-[40px] font-semibold text-[16px] sm:text-[18px] lg:text-[22px] inline-block text-white">
+              <h3 className="bg-[#650010] p-2.5 sm:py-5 sm:px-10 font-semibold text-[16px] sm:text-[18px] lg:text-[22px] inline-block text-white">
                 Knowledge Partners
               </h3>
             </div>
-            <div className="w-full flex flex-wrap items-center justify-center gap-[20px] px-[20px] my-[30px]">
+            <div className="w-full flex flex-wrap items-center justify-center gap-5 px-5 my-7.5">
               {[
                 { src: "/iccide-ieee.png", alt: "IEEE" },
                 { src: "/iccide-acm.png", alt: "ACM" },
@@ -292,7 +292,7 @@ export default function Home() {
               ].map((p) => (
                 <div
                   key={p.alt}
-                  className="w-[110px] sm:w-[120px] lg:w-[130px] h-[120px] relative"
+                  className="w-27.5 sm:w-30 lg:w-32.5 h-30 relative"
                 >
                   <Image
                     src={p.src}
